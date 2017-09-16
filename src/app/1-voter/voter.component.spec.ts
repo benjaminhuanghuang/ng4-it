@@ -16,5 +16,9 @@ describe("VoterComponent", () => {
     //fixture.debugElement
   });
 
-  it("", () => {});
+  it("should render total votes", () => {
+    component.othersVote = 20;
+    component.myVote = 1;
+    fixture.debugElement.query(By.css(".vote-count"));
+  });
 });
